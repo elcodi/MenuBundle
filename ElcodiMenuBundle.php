@@ -35,5 +35,4 @@ class ElcodiMenuBundle extends Bundle
 
         $container->addCompilerPass(new MappingCompilerPass());
     }
-
 }

@@ -37,7 +37,7 @@ class MenuRepositoryTest extends WebTestCase
     }
 
     /**
-     * Test category repository provider
+     * Test menu repository provider
      */
     public function testFactoryProvider()
     {
@@ -48,7 +48,7 @@ class MenuRepositoryTest extends WebTestCase
     }
 
     /**
-     * Test category repository provider alias
+     * Test menu repository provider alias
      */
     public function testFactoryProviderAlias()
     {
