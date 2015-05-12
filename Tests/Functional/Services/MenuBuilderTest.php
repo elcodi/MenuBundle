@@ -15,25 +15,15 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\MenuBundle\Tests\Functional\EventListener;
+namespace Elcodi\Bundle\MenuBundle\Tests\Functional\Services;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
 
 /**
- * Class ActivateFromRequestEventListenerTest
+ * Class MenuBuilderTest
  */
-class ActivateFromRequestEventListenerTest extends WebTestCase
+class MenuBuilderTest extends WebTestCase
 {
-    /**
-     * Schema must be loaded in all test cases
-     *
-     * @return boolean Load schema
-     */
-    protected function loadSchema()
-    {
-        return false;
-    }
-
     /**
      * Returns the callable name of the service
      *
@@ -42,7 +32,19 @@ class ActivateFromRequestEventListenerTest extends WebTestCase
     public function getServiceCallableName()
     {
         return [
-            'elcodi.event_listener.activate_menu_from_request',
+            'elcodi.menu_builder',
+        ];
+    }
+
+    /**
+     * Load fixtures of these bundles
+     *
+     * @return array Bundles name where fixtures should be found
+     */
+    protected function loadFixturesBundles()
+    {
+        return [
+            'ElcodiMenuBundle',
         ];
     }
 }

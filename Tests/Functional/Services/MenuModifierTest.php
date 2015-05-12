@@ -15,25 +15,15 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\MenuBundle\Tests\Functional\Serializer;
+namespace Elcodi\Bundle\MenuBundle\Tests\Functional\Services;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
 
 /**
- * Class MenuArraySerializerTest
+ * Class MenuModifierTest
  */
-class MenuArraySerializerTest extends WebTestCase
+class MenuModifierTest extends WebTestCase
 {
-    /**
-     * Schema must be loaded in all test cases
-     *
-     * @return boolean Load schema
-     */
-    protected function loadSchema()
-    {
-        return false;
-    }
-
     /**
      * Returns the callable name of the service
      *
@@ -42,7 +32,19 @@ class MenuArraySerializerTest extends WebTestCase
     public function getServiceCallableName()
     {
         return [
-            'elcodi.serializer.menu',
+            'elcodi.menu_modifier',
+        ];
+    }
+
+    /**
+     * Load fixtures of these bundles
+     *
+     * @return array Bundles name where fixtures should be found
+     */
+    protected function loadFixturesBundles()
+    {
+        return [
+            'ElcodiMenuBundle',
         ];
     }
 }
